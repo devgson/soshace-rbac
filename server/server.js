@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const path = require('path')
 const User = require('./models/userModel')
@@ -19,7 +18,6 @@ mongoose.connect('mongodb://localhost:27017/rbac', { useNewUrlParser: true }).th
   console.log('Connected to the Database successfully')
 });
 
-app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(async (req, res, next) => {
