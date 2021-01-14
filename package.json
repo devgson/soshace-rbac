@@ -1,22 +1,26 @@
 {
-  "name": "sochase-rbac",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server/server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server/server.js",
-    "start": "node server/server.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "accesscontrol": "^2.2.1",
-    "bcrypt": "^3.0.6",
-    "body-parser": "^1.19.0",
-    "dotenv": "^8.0.0",
-    "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.7.5"
-  }
+    "name": "sochase-rbac",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/server.js",
+    "scripts": {
+        "format": "prettier --write \"src/**/*.js\"",
+        "start:dev": "cross-env NODE_ENV=development nodemon src/server.js",
+        "start": "node src/server.js"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "accesscontrol": "^2.2.1",
+        "bcrypt": "^5.0.0",
+        "body-parser": "^1.19.0",
+        "dotenv": "^8.0.0",
+        "express": "^4.17.1",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.7.5"
+    },
+    "devDependencies": {
+        "cross-env": "^7.0.2",
+        "nodemon": "^2.0.4",
+        "prettier": "^2.2.1"
+    }
 }
