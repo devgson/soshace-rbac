@@ -19,6 +19,7 @@ mongoose.connect('mongodb://localhost:27017/rbac', { useNewUrlParser: true }).th
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.use(async (req, res, next) => {
   if (req.headers["x-access-token"]) {
